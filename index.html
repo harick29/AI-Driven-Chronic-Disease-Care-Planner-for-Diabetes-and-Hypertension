@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chronic Disease Care Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>AI Chronic Disease Care Planner</h1>
+    <p>For Diabetes & Hypertension (Care Companion)</p>
+  </header>
+
+  <main>
+
+    <!-- Medication Section -->
+    <section class="card">
+      <h2>💊 Tablet Schedule</h2>
+      <input type="text" id="medicine" placeholder="Medicine name" />
+      <input type="time" id="time" />
+      <button onclick="addMedicine()">Add Reminder</button>
+      <ul id="medicineList"></ul>
+      <p class="streak">🔥 Adherence Streak: <span id="streak">0</span> days</p>
+    </section>
+
+    <!-- Watch Data -->
+    <section class="card">
+      <h2>⌚ Wellness Data (Mock)</h2>
+      <p>Heart Rate: <span id="heartRate">72</span> bpm</p>
+      <p>Steps Today: <span id="steps">4200</span></p>
+      <button onclick="updateWatchData()">Refresh Data</button>
+    </section>
+
+    <!-- Diet Plan -->
+    <section class="card">
+      <h2>🥗 Daily Diet Plan</h2>
+      <ul>
+        <li>Breakfast: Oats + Fruits</li>
+        <li>Lunch: Brown rice + Vegetables</li>
+        <li>Dinner: Millet roti + Greens</li>
+      </ul>
+    </section>
+
+    <!-- Exercise -->
+    <section class="card">
+      <h2>🏃 Exercise Plan</h2>
+      <p>✅ Walk 6,000 steps</p>
+      <p>✅ 10 minutes stretching / yoga</p>
+    </section>
+
+    <!-- AI Companion -->
+    <section class="card ai">
+      <h2>🤖 AI Care Companion</h2>
+      <p id="aiMessage">
+        Stay consistent today! Small steps lead to healthy living 🌱
+      </p>
+      <button onclick="changeMessage()">Get Motivation</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>This app does not replace doctors. Consult professionals when needed.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
